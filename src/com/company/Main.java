@@ -23,5 +23,7 @@ public class Main {
         }
 
         catalog2.printDocs();
+
+        catalog2.view("D:/tmp/report_result_0016.html");
     }
 }
