@@ -17,6 +17,12 @@ public class Document implements Serializable {
         tags = new ArrayList<Pair<String, String>>();
         location = loc;
         name = title;
+        id = hashCode(location);
+    }
+
+    private String hashCode(String location) {
+        return location;
+        // sau orice alta functie hash, dar a fost mai rapid asa :))
     }
 
     public void addTag(Pair<String, String> newTag) {
@@ -33,5 +39,10 @@ public class Document implements Serializable {
 
     public String getLocation() {
         return location;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " " + getLocation();
     }
 }

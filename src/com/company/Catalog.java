@@ -73,4 +73,10 @@ public class Catalog implements Serializable {
             }
         }
     }
+
+    public void printDocs() {
+        for(Document document: documentList) {
+            System.out.println(document);
+        }
+    }
 }
